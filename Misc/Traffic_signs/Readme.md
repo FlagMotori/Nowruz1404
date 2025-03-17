@@ -1,7 +1,9 @@
 To solve this steganography challenge, you need to consider three things about this traffic sign:
 
 1- The first letter of three words refer to LSB, which is a common method in steganography.
+
 2- The UTurn means that the extraction method reverse way. (From the last to the first pixel).
+
 3- The green color of the sign refers to the green channel of the RGB image.
 
 So we need to extract the LSB bits of the green channel of the image in a reverse way.
