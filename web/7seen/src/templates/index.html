@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Seen Table</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            width: 300px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 220px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .card-footer {
+            font-size: 0.9rem;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        .flag-section {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 5px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        span.disabled {
+        	opacity: 0.33;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>7Seen Table</h1>
+
+    <p>Preparing the <b>Haft-Seen Table</b> on Nowruz is an Iranian traditional custom. Let's go to prepare one :)<br><br>
+	Each <b>Haft-Seen table</b> has seven components that starts with 'س' in persian (read "Seen") like Apple that called "Sib" in persian<br>
+	for making one, you have to find them here, They are hidden somewhere<br>
+	Find them and enter each component in bellow to make your "Haft-Seen Table"</p>
+
+    <div class="input-container">
+        <input type="text" id="seen" placeholder="Enter your Seen..." data-value="{{ plch }}">
+        <button id="putseen">Put Seen</button>
+    </div>
+
+    <div class="subtitle">Your Prepared 7Seen Table:</div>
+
+    <div class="card-container">
+		{% for symbol in symbols %}
+		<div class="card">
+            <img src="{{ symbol['ico'] }}" alt="Symbol {{ symbol['symbol'] }}">
+            <div class="card-body">
+                <p class="card-description">{{ symbol["description"] }}</p>
+            </div>
+            <div class="card-footer">{{ symbol["symbol"] }}</div>
+        </div>
+        {% else %}
+        <p>You have not any Haft-Seen table yet</p>
+		{% endfor %}        
+    </div>
+
+	<div class="flag-section">
+    	FMCTF&#123;{% for part in flag_parts %}<span class={{ part["class"] }}>{{ part["name"] }}</span>{% if part["id"] < 7 %}<span>_</span>{% endif %}{% endfor %}&#125;
+    </div>
+
+    <script type="text/javascript">
+    	putseen.addEventListener("click", (event) => {
+    		event.preventDefault();
+    		body = JSON.stringify({seen: seen.value});
+    		console.log(body)
+    		fetch("/prepare", {method: "POST", headers: {"content-type": "application/json"}, body: body})
+    			.then(response => response.json())
+    			.then(json => {
+    				if (!json.status && json.message) {
+    					alert(json.message)
+    				} else {
+    					window.location = "/"
+    				} 
+    			})
+    	})
+    </script>
+    <!-- Samano is really delicious, keep it away from other: {{ cmnt }}  -->
+</body>
+</html>

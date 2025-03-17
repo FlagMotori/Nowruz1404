@@ -1,0 +1,1 @@
+FMCTF{fake_flag}

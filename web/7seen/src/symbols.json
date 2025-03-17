@@ -1,0 +1,51 @@
+{
+	"S4bZz3hhH": {
+		"id": 0,
+		"symbol": "Sabzeh",
+		"seen": "S4bZz3hhH",
+		"description": "",
+		"ico": "/static/symbols/sabzeh.png"
+	},
+	"S1IIr": {
+		"id": 1,
+		"symbol": "Sir",
+		"seen": "S1IIr",
+		"description": "",
+		"ico": "/static/symbols/sir.png"
+	},
+	"S1iBb": {
+		"id": 2,
+		"symbol": "Sib",
+		"seen": "S1iBb",
+		"description": "",
+		"ico": "/static/symbols/sib.png"
+	},
+	"S4Am4n0Oo": {
+		"id": 3,
+		"symbol": "Samano",
+		"seen": "S4Am4n0Oo",
+		"description": "",
+		"ico": "/static/symbols/samanoo.png"
+	},
+	"Se3nJ3dDd": {
+		"id": 4,
+		"symbol": "Senjed",
+		"seen": "Se3nJ3dDd",
+		"description": "",
+		"ico": "/static/symbols/senjed.png"
+	},
+	"SOonb0Ll": {
+		"id": 5,
+		"symbol": "Sonbol",
+		"seen": "SOonb0Ll",
+		"description": "",
+		"ico": "/static/symbols/sonbol.png"
+	},
+	"Se3kKke3": {
+		"id": 6,
+		"symbol": "Seke",
+		"seen": "Se3kKke3",
+		"description": "",
+		"ico": "/static/symbols/seke.png"
+	}
+}

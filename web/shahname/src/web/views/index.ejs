@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahname</title>
+    <style>
+    	@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Rubik+Glitch&display=swap');
+
+        body {
+            font-family: "Reem Kufi", Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-item .title {
+            padding: 15px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>گالری شاهنامه</h1>
+
+    <div class="gallery">
+    </div>
+
+    <script type="text/javascript">
+    	const gallery = document.querySelector(".gallery");
+
+    	let count = parseInt("<%- count %>");
+    	for (let i = 0; i < count; i++) {
+    		fetch("/random")
+    			.then(response => response.json())
+    			.then(json => {
+    				let item = document.createElement("div");
+		    		let img = document.createElement("img");
+		    		let title = document.createElement("div");
+		    		item.classList.add("gallery-item")
+		    		title.classList.add("title");
+
+		    		img.src = json.paint_src;
+		    		img.alt = json.title;
+		    		title.textContent = json.title;
+		    		item.append(img, title)
+
+		    		gallery.append(item)
+    			})
+    	}
+    </script>
+</body>
+</html>

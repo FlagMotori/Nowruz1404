@@ -1,0 +1,19 @@
+version: "3.2"
+
+services:
+  web:
+    build: .
+    ports:
+      - 1337:80
+    volumes:
+      - ./src/:/var/www/html/
+    depends_on:
+      - db
+    environment:
+      - MYSQL_ROOT_PASSWORD=123123132
+      - MYSQL_DATABASE=blackmirror
+  db:
+    build: ./db
+    environment:
+      - MYSQL_ROOT_PASSWORD=123123132
+      - MYSQL_DATABASE=blackmirror
