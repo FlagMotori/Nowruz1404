@@ -1,0 +1,69 @@
+{
+    "inbounds": [
+        {
+            "type": "direct",
+            "tag": "vless-p",
+            "listen": "::0",
+            "listen_port": 1121,
+            "override_port": 1131
+        },
+        {
+            "type": "direct",
+            "tag": "vmess-p",
+            "listen": "::0",
+            "listen_port": 1122,
+            "override_port": 1132
+        },
+        {
+            "listen_port": 1111,
+            "type": "vless",
+            "users": [
+                {
+                    "uuid": "875aa716-c9aa-43ee-bea0-9dbcbe87256d"
+                }
+            ],
+            "tag": "vless-in"
+        },
+        {
+            "listen_port": 1112,
+            "type": "vmess",
+            "users": [
+                {
+                    "uuid": "875aa716-c9aa-43ee-bea0-9dbcbe87256d"
+                }
+            ],
+            "tag": "vmess-in"
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        },
+        {
+            "server": "127.0.0.1",
+            "server_port": 1111,
+            "type": "vless",
+            "uuid": "875aa716-c9aa-43ee-bea0-9dbcbe87256d",
+            "tag": "vless-out"
+        },
+        {
+            "server": "127.0.0.1",
+            "server_port": 1112,
+            "type": "vmess",
+            "uuid": "875aa716-c9aa-43ee-bea0-9dbcbe87256d",
+            "tag": "vmess-out"
+        }
+    ],
+    "route": {
+        "rules": [
+            {
+                "inbound": "vless-p",
+                "outbound": "vless-out"
+            },
+            {
+                "inbound": "vmess-p",
+                "outbound": "vmess-out"
+            }
+        ]
+    }
+}
