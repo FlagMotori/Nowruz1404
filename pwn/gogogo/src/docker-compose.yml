@@ -1,0 +1,6 @@
+services:
+  pwn:
+    build: .
+    ports:
+      - "6000:5000"
+    cpuset: "0"

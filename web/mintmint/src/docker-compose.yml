@@ -1,0 +1,17 @@
+services:
+  bot:
+    build: ./bot/
+    restart: always 
+    ports:
+      - "8001:8000"
+    environment:
+      - "FLAG=FMCTF{f364e3d1a10534b7773f9e99da8c2954}"
+      - "CAPTCHA_SECRET="
+      - "WEB_DOMAIN=web"
+  web:
+    image: nginx:latest
+    restart: always 
+    ports:
+      - "8000:80"
+    volumes:
+      - ./chall.html:/usr/share/nginx/html/index.html

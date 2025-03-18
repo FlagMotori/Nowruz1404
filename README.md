@@ -26,6 +26,12 @@
 | [shahname](web/shahname)           |    web     | [carrot303](https://github.com/carrot303)   |   56   |
 | [7seen](web/7seen)              |    web     | [carrot303](https://github.com/carrot303)   |   45   |
 | [blackmirror](web/blackmirror)        |    web     | [carrot303](https://github.com/carrot303)   |   12   |
+| [🌱](web/mint)        |    web     | [prt](https://github.com/)   |   7   |
+| [🌱🌱](web/mintmint)        |    web     | [prt](https://github.com/)   |   1   |
 | [ecal](misc/ecal)               |    misc    | [carrot303](https://github.com/carrot303)   |   17   |
 | [Traffic_signs](misc/Traffic_signs)      |    misc    | [HIGHer](https://github.com/HIGH0101)    |    6   |
+| [Seen-Shop](pwn/Seen-Shop)      |    pwn    | [prt](https://github.com/)    |    57   |
+| [Seen-Guessing](pwn/Seen-Guessing)      |    pwn    | [prt](https://github.com/)    |    48   |
+| [Eidi-Diary](pwn/Eidi-Diary)      |    pwn    | [prt](https://github.com/)    |    4   |
+| [gogogo](pwn/gogogo)      |    pwn    | [prt](https://github.com/)    |    0   |
 
