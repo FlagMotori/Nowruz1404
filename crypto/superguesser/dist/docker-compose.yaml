@@ -1,0 +1,26 @@
+services:
+  superguesser:
+    build:
+      context: .
+    container_name: superguesser
+    image: superguesser:latest
+    ports:
+      - "2001:1234"
+    environment: 
+      - "PYTHONUNBUFFERED:1"
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: 0.2
+          memory: 512M
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
