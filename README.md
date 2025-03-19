@@ -28,10 +28,19 @@
 | [blackmirror](web/blackmirror)        |    web     | [carrot303](https://github.com/carrot303)   |   12   |
 | [🌱](web/mint)        |    web     | [prt](https://github.com/)   |   7   |
 | [🌱🌱](web/mintmint)        |    web     | [prt](https://github.com/)   |   1   |
+| [Arnou Leroy](misc/Arnou_Leroy) |    misc    | [Inalov](https://github.com/inalov)   |   49   |
 | [ecal](misc/ecal)               |    misc    | [carrot303](https://github.com/carrot303)   |   17   |
 | [Traffic_signs](misc/Traffic_signs)      |    misc    | [HIGHer](https://github.com/HIGH0101)    |    6   |
 | [Seen-Shop](pwn/Seen-Shop)      |    pwn    | [prt](https://github.com/)    |    57   |
 | [Seen-Guessing](pwn/Seen-Guessing)      |    pwn    | [prt](https://github.com/)    |    48   |
 | [Eidi-Diary](pwn/Eidi-Diary)      |    pwn    | [prt](https://github.com/)    |    4   |
 | [gogogo](pwn/gogogo)      |    pwn    | [prt](https://github.com/)    |    0   |
+| [A Revengefu Accident](OSINT/A_Revengefu_Accident) |   OSINT   | [Inalov](https://github.com/inalov) |  107   |
+| [Im hungry](OSINT/Im_Hungry) |   OSINT   | [Inalov](https://github.com/inalov) |  53   |
+| [Skiddie Part1](OSINT/Anon_Skiddie_Part_1) |   OSINT   | [Inalov](https://github.com/inalov) |  27   |
+| [Somewhere Near The Bay Part2](OSINT/Somewhere_Near_The_Bay_Part_2) |   OSINT   | [Inalov](https://github.com/inalov) |  23   |
+| [Anon Skiddie Part2](OSINT/Anon_Skiddie_Part_2) |   OSINT   | [Inalov](https://github.com/inalov) |  17   |
+| [Somewhere Near The Bay Part1](OSINT/Somewhere_Near_The_Bay_Part_1) |   OSINT   | [Inalov](https://github.com/inalov) |  17   |
+| [The Hotel](OSINT/The_Hotel) |   OSINT   | Jimbo |  14   |
+| [SHIPCOIN Imposter](OSINT/SHIPCOIN_Imposter) |   OSINT   | [Inalov](https://github.com/inalov) |  9   |
 
